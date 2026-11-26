@@ -3,127 +3,287 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Royal Taste Restaurant</title>
+<title>Royal Taste | Fine Dining Restaurant</title>
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
     background: #111;
     color: white;
+    line-height: 1.6;
+}
+
+:root {
+    --gold: #d6a85c;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 8%;
-    background: #191919;
+    padding: 22px 8%;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
 }
 
 .logo {
-    color: orange;
     font-size: 25px;
     font-weight: bold;
+    color: var(--gold);
+    letter-spacing: 2px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
 }
 
 .hero {
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     align-items: center;
-    padding: 60px 8%;
-    background: linear-gradient(90deg, #111, #1119),
-    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600');
+    padding: 80px 10%;
+    background:
+        linear-gradient(90deg, rgba(15,15,15,.92), rgba(15,15,15,.35)),
+        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600');
     background-size: cover;
     background-position: center;
 }
 
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
 .hero h1 {
-    font-size: 55px;
+    font-size: 62px;
+    line-height: 1.15;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 25px;
+    color: #eee;
+    margin-bottom: 28px;
 }
 
 .btn {
     display: inline-block;
-    background: orange;
-    color: black;
+    background: var(--gold);
+    color: #171717;
     padding: 14px 25px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px;
     font-weight: bold;
+    margin: 5px 8px 5px 0;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title p {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about h2 {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.about p {
+    color: #ccc;
+    margin-bottom: 20px;
 }
 
 .menu {
-    padding: 60px 8%;
-    text-align: center;
-}
-
-.menu h2 {
-    color: orange;
-    font-size: 35px;
-    margin-bottom: 30px;
+    background: #191919;
 }
 
 .foods {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .food {
     background: #222;
-    padding: 30px;
-    border-radius: 10px;
-    width: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: .3s;
 }
+
+.food:hover {
+    transform: translateY(-8px);
+}
+
 .food img {
     width: 100%;
-    height: 140px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
 }
+
+.food-info {
+    padding: 22px;
+}
+
 .food h3 {
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.food p {
+    color: #bbb;
+    margin-bottom: 12px;
 }
 
 .price {
-    color: orange;
-    margin-top: 12px;
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.testimonials {
+    background: #111;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.review {
+    background: #222;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 3px solid var(--gold);
+}
+
+.stars {
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.review p {
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.review h4 {
+    color: var(--gold);
+}
+
+.contact {
+    text-align: center;
+    background: #1b1b1b;
+}
+
+.contact p {
+    color: #ccc;
+    margin: 12px 0;
 }
 
 footer {
-    background: #191919;
+    background: #080808;
+    padding: 28px 8%;
     text-align: center;
-    padding: 25px;
+    color: #aaa;
 }
-@media(max-width:600px) {
+
+footer span {
+    color: var(--gold);
+}
+
+@media(max-width: 768px) {
     header {
         flex-direction: column;
         gap: 15px;
     }
-    nav a {
-        margin: 0 5px;
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
+
+    nav a {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 60px 7%;
+    }
+
     .hero h1 {
-        font-size: 38px;
+        font-size: 42px;
+    }
+
+    .about,
+    .foods,
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
     }
 }
 </style>
@@ -134,90 +294,162 @@ footer {
 <header>
     <div class="logo">ROYAL TASTE</div>
     <nav>
-        <a href="#">Home</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
+<section class="hero" id="home">
+    <div class="hero-content">
 
-<section class="hero">
-    <div>
-        <h1>Delicious Food<br>Beautiful Moments</h1>
-        <p>Experience the taste of amazing food.</p>
-        <a href="#menu" class="btn">Explore Menu</a>
+        <p class="tagline">WELCOME TO ROYAL TASTE</p>
 
-<a href="https://wa.me/919389610639"
-   class="btn"
-   target="_blank">
-   Order on WhatsApp
-</a>
+        <h1>
+            Taste The<br>
+            Art Of Fine Dining
+        </h1>
+
+        <p>
+            Discover delicious food, fresh ingredients
+            and unforgettable dining experiences.
+        </p>
+
+        <a href="#menu" class="btn">Explore Our Menu</a>
+
+        <a href="#contact" class="btn">Contact Us</a>
+
     </div>
 </section>
-<section style="padding:60px 8%; text-align:center; background:#222;">
-    <h2 style="color:orange; font-size:35px;">
-        About Royal Taste
-    </h2>
+<section class="contact" id="contact">
 
-    <p style="max-width:700px; margin:20px auto; line-height:1.8;">
-        Welcome to Royal Taste Restaurant.
-        We serve delicious food made with fresh ingredients.
-        Our goal is to make every meal special.
-        Visit us and enjoy a wonderful dining experience.
+    <div class="section-title">
+        <p>GET IN TOUCH</p>
+        <h2>Contact & Visit Us</h2>
+    </div>
+
+    <p>We would love to welcome you!</p>
+
+    <p>
+        <strong>Address:</strong>
+        Add Restaurant Full Address
     </p>
 
-    <a href="#contact" class="btn">Contact Us</a>
+    <p>
+        <strong>Email:</strong>
+        hello@example.com
+    </p>
+
+    <p>
+        <strong>Phone:</strong>
+        +91 9389610639
+    </p>
+
+    <div style="margin-top:25px;">
+
+        <a href="surajkashyapji2025@gmail.com" class="btn">
+            Email Us
+        </a>
+
+        <a href="tel:+919389610639" class="btn">
+            Call Now
+        </a>
+
+        <a href="https://wa.me/919389610639" 
+           target="_blank" class="btn">
+            WhatsApp Us
+        </a>
+
+    </div>
+
 </section>
+
+<section id="about">
+    <div class="about">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1000" alt="Restaurant dining">
+
+        <div>
+            <p class="tagline">OUR STORY</p>
+            <h2>About Royal Taste</h2>
+            <p>Welcome to Royal Taste, where great food meets a beautiful dining experience. We believe every meal should be special.</p>
+            <p>Our restaurant brings together delicious flavours, quality ingredients and warm hospitality.</p>
+            <a href="#contact" class="btn">Visit Us</a>
+        </div>
+    </div>
+</section>
+
 <section class="menu" id="menu">
-    <h2>Our Popular Menu</h2>
-
-<div class="foods">
-
-    <div class="food">
-        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500">
-        <h3>Pizza</h3>
-        <p>Delicious Cheese Pizza</p>
-        <div class="price">$10</div>
+    <div class="section-title">
+        <p>OUR SPECIALITIES</p>
+        <h2>Explore Our Menu</h2>
     </div>
 
-    <div class="food">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500">
-        <h3>Burger</h3>
-        <p>Fresh Classic Burger</p>
-        <div class="price">$7</div>
-    </div>
+    <div class="foods">
+        <div class="food">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800" alt="Cheese pizza">
+            <div class="food-info">
+                <h3>Cheese Pizza</h3>
+                <p>Freshly prepared pizza with delicious cheese.</p>
+                <div class="price">$10</div>
+            </div>
+        </div>
 
-    <div class="food">
-        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=500">
-        <h3>Pasta</h3>
-        <p>Italian Style Pasta</p>
-        <div class="price">$9</div>
-    </div>
+        <div class="food">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" alt="Classic burger">
+            <div class="food-info">
+                <h3>Classic Burger</h3>
+                <p>A tasty burger made with fresh ingredients.</p>
+                <div class="price">$7</div>
+            </div>
+        </div>
 
-</div>
+        <div class="food">
+            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800" alt="Italian pasta">
+            <div class="food-info">
+                <h3>Italian Pasta</h3>
+                <p>Rich and creamy pasta with special flavours.</p>
+                <div class="price">$9</div>
+            </div>
+        </div>
+    </div>
 </section>
-<section style="padding:60px 8%; text-align:center; background:#191919;">
 
-    <h2 style="color:orange; font-size:32px; margin-bottom:30px;">
-        What Our Customers Say
-    </h2>
-
-    <div style="background:#292929; padding:25px; border-radius:12px; margin-bottom:15px;">
-        <h3>⭐⭐⭐⭐⭐</h3>
-        <p>"Amazing food and wonderful service!"</p>
-        <h4 style="color:orange; margin-top:12px;">- Customer</h4>
+<section class="testimonials" id="reviews">
+    <div class="section-title">
+        <p>GUEST EXPERIENCES</p>
+        <h2>What People Say</h2>
     </div>
 
-    <div style="background:#292929; padding:25px; border-radius:12px;">
-        <h3>⭐⭐⭐⭐⭐</h3>
-        <p>"A beautiful place with delicious food."</p>
-        <h4 style="color:orange; margin-top:12px;">- Customer</h4>
-    </div>
+    <div class="reviews">
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>Sample review: Amazing food and wonderful service!</p>
+            <h4>Sample Customer</h4>
+        </div>
 
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>Sample review: A beautiful place with delicious food.</p>
+            <h4>Sample Customer</h4>
+        </div>
+    </div>
 </section>
-<footer id="contact">
-    <h3>ROYAL TASTE RESTAURANT</h3>
-    <p>Contact: hello@example.com</p>
-    <p>© 2026 Royal Taste</p>
+
+<section class="contact" id="contact">
+    <div class="section-title">
+        <p>GET IN TOUCH</p>
+        <h2>Visit Royal Taste</h2>
+    </div>
+
+    <p>We would love to welcome you!</p>
+    <p>Email: hello@example.com</p>
+    <p>Phone: Add Restaurant Phone Number</p>
+    <a href="mailto:hello@example.com" class="btn">Email Us</a>
+</section>
+
+<footer>
+    <p>© 2026 <span>Royal Taste</span>. All Rights Reserved.</p>
 </footer>
 
 </body>
