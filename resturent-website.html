@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Taste Restaurant</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #191919;
+}
+
+.logo {
+    color: orange;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background: linear-gradient(90deg, #111, #1119),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: orange;
+    color: black;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.menu {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.menu h2 {
+    color: orange;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.foods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.food {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 220px;
+}
+.food img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.food h3 {
+    margin-bottom: 10px;
+}
+
+.price {
+    color: orange;
+    margin-top: 12px;
+}
+
+footer {
+    background: #191919;
+    text-align: center;
+    padding: 25px;
+}
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a {
+        margin: 0 5px;
+    }
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ROYAL TASTE</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Delicious Food<br>Beautiful Moments</h1>
+        <p>Experience the taste of amazing food.</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+
+<a href="https://wa.me/919389610639"
+   class="btn"
+   target="_blank">
+   Order on WhatsApp
+</a>
+    </div>
+</section>
+<section style="padding:60px 8%; text-align:center; background:#222;">
+    <h2 style="color:orange; font-size:35px;">
+        About Royal Taste
+    </h2>
+
+    <p style="max-width:700px; margin:20px auto; line-height:1.8;">
+        Welcome to Royal Taste Restaurant.
+        We serve delicious food made with fresh ingredients.
+        Our goal is to make every meal special.
+        Visit us and enjoy a wonderful dining experience.
+    </p>
+
+    <a href="#contact" class="btn">Contact Us</a>
+</section>
+<section class="menu" id="menu">
+    <h2>Our Popular Menu</h2>
+
+<div class="foods">
+
+    <div class="food">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500">
+        <h3>Pizza</h3>
+        <p>Delicious Cheese Pizza</p>
+        <div class="price">$10</div>
+    </div>
+
+    <div class="food">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500">
+        <h3>Burger</h3>
+        <p>Fresh Classic Burger</p>
+        <div class="price">$7</div>
+    </div>
+
+    <div class="food">
+        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=500">
+        <h3>Pasta</h3>
+        <p>Italian Style Pasta</p>
+        <div class="price">$9</div>
+    </div>
+
+</div>
+</section>
+<section style="padding:60px 8%; text-align:center; background:#191919;">
+
+    <h2 style="color:orange; font-size:32px; margin-bottom:30px;">
+        What Our Customers Say
+    </h2>
+
+    <div style="background:#292929; padding:25px; border-radius:12px; margin-bottom:15px;">
+        <h3>⭐⭐⭐⭐⭐</h3>
+        <p>"Amazing food and wonderful service!"</p>
+        <h4 style="color:orange; margin-top:12px;">- Customer</h4>
+    </div>
+
+    <div style="background:#292929; padding:25px; border-radius:12px;">
+        <h3>⭐⭐⭐⭐⭐</h3>
+        <p>"A beautiful place with delicious food."</p>
+        <h4 style="color:orange; margin-top:12px;">- Customer</h4>
+    </div>
+
+</section>
+<footer id="contact">
+    <h3>ROYAL TASTE RESTAURANT</h3>
+    <p>Contact: hello@example.com</p>
+    <p>© 2026 Royal Taste</p>
+</footer>
+
+</body>
+</html>
